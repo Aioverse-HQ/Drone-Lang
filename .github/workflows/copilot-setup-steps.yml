@@ -1,0 +1,30 @@
+name: "Copilot Setup Steps"
+
+on:
+    workflow_dispatch:
+    push:
+        paths:
+            - .github/workflows/copilot-setup-steps.yml
+    pull_request:
+        paths:
+            - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+    copilot-setup-steps:
+        runs-on: ubuntu-latest
+
+        environment: copilot
+
+        permissions:
+            contents: read
+
+        steps:
+            - name: Expose Claude Code API key
+              run: echo "ANTHROPIC_API_KEY is configured"
+              env:
+                  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+            - name: Expose Bear app token
+              run: echo "BEAR_APP_TOKEN is configured"
+              env:
+                  BEAR_APP_TOKEN: ${{ secrets.BEAR_APP_TOKEN }}
