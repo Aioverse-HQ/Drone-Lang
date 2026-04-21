@@ -1,0 +1,35 @@
+{
+  "name": "drone-lang",
+  "version": "1.0.0",
+  "description": "Drone-Lang",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --testPathPatterns=tests/"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aioverse-HQ/Drone-Lang.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aioverse-HQ/Drone-Lang/issues"
+  },
+  "homepage": "https://github.com/Aioverse-HQ/Drone-Lang#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.2",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0",
+    "supertest": "^7.2.2"
+  }
+}
